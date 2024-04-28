@@ -1,0 +1,1 @@
+{"name":"Local: 0-1_Knapsack","url":"d:\\Akash\\My work space\\Algorithm\\Dynamic Programming\\0-1_Knapsack.cpp","tests":[{"id":1709387268817,"input":"4\n2 3 4 5\n1 3 5 3\n8","output":"8"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Akash\\My work space\\Algorithm\\Dynamic Programming\\0-1_Knapsack.cpp","group":"local","local":true}

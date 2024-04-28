@@ -1,0 +1,1 @@
+{"name":"Local: Components","url":"d:\\Akash\\My work space\\Algorithm\\Graph\\Components.cpp","tests":[{"id":1706698560002,"input":"6 5\n0 1\n1 2\n0 2\n3 4\n3 5\n0","output":"0\n1\n2\n3\n4\n5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Akash\\My work space\\Algorithm\\Graph\\Components.cpp","group":"local","local":true}

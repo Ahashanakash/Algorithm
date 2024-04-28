@@ -1,0 +1,90 @@
+#include <bits/stdc++.h>
+using namespace std;
+char a[20][20];
+bool vis[20][20];
+vector<pair<int, int>> d = {{0, 1}, {0, -1}, {-1, 0}, {1, 0}};
+int n, m;
+bool valid(int i, int j)
+{
+    if (i < 0 || i >= n || j < 0 || j >= m)
+        return false;
+    return true;
+}
+void dfs(int si, int sj)
+{
+    cout << si << " " << sj << endl;
+    vis[si][sj] = true;
+    for (int i = 0; i < 4; i++)
+    {
+        int ci = si + d[i].first;
+        int cj = sj + d[i].second;
+        if (valid(ci, cj) == true && vis[ci][cj] == false)
+        {
+            dfs(ci, cj);
+        }
+    }
+}
+int main()
+{
+    cin >> n >> m;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            cin >> a[i][j];
+        }
+    }
+    int si, sj;
+    cin >> si >> sj;
+    memset(vis, false, sizeof(vis));
+    dfs(si, sj);
+    return 0;
+}
+
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// char a[1005][1005];
+// bool visit[1005][1005];
+// vector<pair<int, int>> d = {{0, 1}, {0, -1}, {-1, 0}, {1, 0}};
+// int n, m;
+// bool valid(int ci, int cj)
+// {
+//     if (ci < 0 || ci >= n || cj < 0 || cj >= m)
+//         return false;
+//     return true;
+// }
+
+// void DFS(int src_i, int src_j)
+// {
+//     cout<<src_i<<" "<<src_j<<endl;
+//     visit[src_i][src_j] = true;
+//     for (int i = 0; i < 4; i++)
+//     {
+//         int ci = src_i + d[i].first;
+//         int cj = src_j + d[i].second;
+//         if (valid(ci, cj) == true && visit[ci][cj] == false)
+//         {
+//             DFS(ci, cj);
+//         }
+//     }
+// }
+
+// int main()
+// {
+//     //int n, m;
+//     cin >> n >> m;
+//     for (int i = 0; i < n; i++)
+//     {
+//         for (int j = 0; j < m; j++)
+//         {
+//             cin >> a[i][j];
+//         }
+//     }
+//     int src_i, src_j;
+//     cin >> src_i >> src_j;
+//     memset(visit, false, sizeof(visit));
+//     DFS(src_i, src_j);
+
+//     return 0;
+// }
